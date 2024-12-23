@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+  
+  <div class="mb-5 pb-5">
+   
+    <form method="post">{% csrf_token %}
+        <p>Are you sure you want to delete "{{ object }}"?</p>
+        {{ form }}
+        <input type="submit" value="Confirm" class="btn btn-danger">
+        <a href="{% url 'home_view' %}" class="btn btn-success">Cancel</a>
+    </form>
+  </div>
+
+   
+  {% endblock %}
+

@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block content %}
+           
+            <form class="px-5 py-3" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form}}
+                <div class="d-flex flex-column justify-content-center mt-3 mb-5">
+                    <input type="submit" value="Update" class="btn btn-light text-dark">
+            
+                </div>
+            </form>
+{% endblock %}
